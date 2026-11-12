@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MailPro · E-mail pro et SMS pro en Côte d'Ivoire</title>
+<meta name="description" content="Une adresse e-mail professionnelle livrée en 30 minutes et bientôt des SMS pro pour parler à vos clients. Paiement Mobile Money : Wave, Orange, MTN, Moov.">
+<meta property="og:title" content="MailPro · E-mail pro et SMS pro en Côte d'Ivoire">
+<meta property="og:description" content="Votre adresse e-mail pro en 30 minutes. Paiement Mobile Money.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+  colors: { ink: '#241b34', mist: '#faf7ff', lilac: '#efe7fb', brand: { 600: '#7c3aed', 700: '#6c35c8', 800: '#5a2aa8' } }
+} } };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  section[id] { scroll-margin-top: 84px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid #6c35c8; outline-offset: 2px; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body class="font-sans text-ink bg-mist antialiased">
+
+<!-- ===== EN-TÊTE ===== -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-lilac">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5" aria-label="MailPro.ci, accueil">
+      <span class="w-9 h-9 rounded-xl bg-brand-700 text-white grid place-items-center"><i class="fa-solid fa-envelope"></i></span>
+      <span class="text-xl font-extrabold tracking-tight">Mail<span class="text-brand-700">Pro</span><span class="text-sm font-semibold text-slate-400">.ci</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+      <a href="#offres" class="hover:text-brand-700">Nos solutions</a>
+      <a href="#comment" class="hover:text-brand-700">Comment ça marche</a>
+      <a href="#tarifs" class="hover:text-brand-700">Tarifs</a>
+      <a href="#faq" class="hover:text-brand-700">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="flex rounded-full bg-lilac p-0.5 text-xs font-bold" role="group" aria-label="Language">
+        <button type="button" id="lang-fr" onclick="setLang('fr')" class="px-3 py-1.5 rounded-full">FR</button>
+        <button type="button" id="lang-en" onclick="setLang('en')" class="px-3 py-1.5 rounded-full">EN</button>
+      </div>
+      <a href="https://wa.me/2250708519651?text=Bonjour%2C%20je%20veux%20cr%C3%A9er%20mon%20e-mail%20pro" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      <a href="#tarifs" class="px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-700 hover:bg-brand-800">Commander</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== HÉROS ===== -->
+<section class="relative overflow-hidden">
+  <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-lilac blur-3xl opacity-80" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto px-5 pt-12 pb-16 lg:pt-16 lg:pb-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <p id="promo-badge" class="hidden mb-5 w-fit items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-900 text-sm font-bold">
+        <i class="fa-solid fa-gift"></i> Jusqu'au 28 octobre : 2 e-mails pro + 10 Go pour 18 000 F
+      </p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-[1.1] tracking-tight">Une image professionnelle, dès le premier message.</h1>
+      <p class="mt-5 text-lg text-slate-600 max-w-md">E-mail pro et SMS pro pour les entreprises de Côte d'Ivoire. On configure tout, vous payez par Mobile Money ou carte bancaire.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#tarifs" class="flex-1 sm:flex-none text-center px-7 py-4 rounded-full font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-600/20">Voir les offres</a>
+        <a href="#tester" class="flex-1 sm:flex-none text-center px-7 py-4 rounded-full font-bold bg-white border border-lilac hover:bg-lilac"><i class="fa-solid fa-wand-magic-sparkles text-brand-700 mr-2"></i>Tester mon adresse</a>
+      </div>
+      <div class="mt-8 flex items-center gap-4">
+        <div class="flex -space-x-3">
+          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=faces&auto=format" alt="" class="w-10 h-10 rounded-full ring-2 ring-white object-cover">
+          <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=100&h=100&fit=crop&crop=faces&auto=format" alt="" class="w-10 h-10 rounded-full ring-2 ring-white object-cover">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces&auto=format" alt="" class="w-10 h-10 rounded-full ring-2 ring-white object-cover">
+        </div>
+        <p class="text-sm text-slate-600"><span class="text-amber-400"><i class="fa-solid fa-star"></i></span> <strong>4.9/5</strong> · +150 entrepreneurs équipés</p>
+      </div>
+    </div>
+
+    <div class="relative max-w-md mx-auto lg:ml-auto w-full">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&h=1100&fit=crop&crop=faces&auto=format" alt="Deux collègues souriants devant un ordinateur" class="w-full aspect-[5/6] sm:aspect-[4/5] object-cover rounded-t-[999px] rounded-b-[2rem] shadow-2xl shadow-brand-700/20">
+      <div class="absolute top-8 left-2 sm:top-10 sm:-left-10 bg-white rounded-2xl shadow-xl p-3.5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-lilac text-brand-700 grid place-items-center"><i class="fa-solid fa-envelope"></i></span>
+        <div><p class="text-sm font-bold">contact@ayacouture.ci</p><p class="text-xs text-emerald-600 font-semibold"><i class="fa-solid fa-circle-check"></i> Actif et vérifié</p></div>
+      </div>
+      <div class="absolute bottom-8 right-2 sm:bottom-10 sm:-right-8 bg-white rounded-2xl rounded-br-sm shadow-xl p-4 max-w-[220px]">
+        <p class="text-sm">Bonjour Aya, votre rendez-vous est confirmé demain à 10h.</p>
+        <p class="text-xs text-emerald-600 font-semibold mt-1">MailPro SMS · Envoyé <i class="fa-solid fa-check-double"></i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOS SOLUTIONS ===== -->
+<section id="offres" class="py-16 lg:py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-xl">Deux façons de parler à vos clients</h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+
+      <article class="bg-white rounded-3xl p-7 border border-lilac flex flex-col">
+        <div class="bg-lilac/60 rounded-2xl p-5 mb-6 space-y-2.5" aria-hidden="true">
+          <div class="bg-white rounded-xl px-4 py-3 flex items-center gap-3 text-sm"><i class="fa-solid fa-circle text-brand-700 text-[8px]"></i><strong>direction@votreentreprise.ci</strong></div>
+          <div class="bg-white/70 rounded-xl px-4 py-3 text-sm text-slate-500">Devis n° 024 · votre proposition</div>
+        </div>
+        <h3 class="text-2xl font-extrabold">E-mail Pro</h3>
+        <p class="mt-2 text-slate-600">Votre adresse @votreentreprise.ci, prête en 30 minutes.</p>
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm font-semibold text-brand-800">
+          <li class="px-3 py-1.5 rounded-full bg-lilac">Sans site web</li>
+          <li class="px-3 py-1.5 rounded-full bg-lilac">Anti-spam inclus</li>
+          <li class="px-3 py-1.5 rounded-full bg-lilac">iPhone, Android, PC</li>
+        </ul>
+        <a href="#tarifs" class="mt-auto pt-6 font-bold text-brand-700 hover:text-brand-800">Voir les tarifs <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+      </article>
+
+      <article class="bg-white rounded-3xl p-7 border border-lilac flex flex-col">
+        <div class="bg-lilac/60 rounded-2xl p-5 mb-6 space-y-2.5" aria-hidden="true">
+          <div class="bg-white rounded-2xl rounded-bl-sm px-4 py-3 text-sm w-fit max-w-[85%]">Bonjour Kofi, votre commande est en route.</div>
+          <div class="bg-brand-700 text-white rounded-2xl rounded-br-sm px-4 py-3 text-sm w-fit ml-auto">Merci, je vous attends !</div>
+        </div>
+        <div class="flex items-center gap-3"><h3 class="text-2xl font-extrabold">SMS Pro</h3><span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">Bientôt disponible</span></div>
+        <p class="mt-2 text-slate-600">Envoyez un message personnalisé à tous vos clients en quelques clics.</p>
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm font-semibold text-brand-800">
+          <li class="px-3 py-1.5 rounded-full bg-lilac">Envois programmés</li>
+          <li class="px-3 py-1.5 rounded-full bg-lilac">Dès 15 F le SMS</li>
+          <li class="px-3 py-1.5 rounded-full bg-lilac">10 SMS offerts</li>
+        </ul>
+        <a href="https://wa.me/2250708519651?text=Bonjour%2C%20je%20veux%20%C3%AAtre%20pr%C3%A9venu(e)%20du%20lancement%20de%20MailPro%20SMS." target="_blank" rel="noopener" class="mt-auto pt-6 font-bold text-emerald-700 hover:text-emerald-800">Être prévenu du lancement <i class="fa-brands fa-whatsapp ml-1"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMENT ÇA MARCHE ===== -->
+<section id="comment" class="py-16 lg:py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Prêt en 30 minutes, depuis votre téléphone</h2>
+    <ol class="mt-10 grid md:grid-cols-3 gap-6">
+      <li class="rounded-3xl bg-mist p-7"><span class="w-12 h-12 rounded-2xl bg-brand-700 text-white grid place-items-center text-lg"><i class="fa-solid fa-pen"></i></span><h3 class="mt-4 font-extrabold text-lg">1. Choisissez</h3><p class="mt-1.5 text-slate-600">Votre nom d'entreprise et votre pack, sur WhatsApp ou en ligne.</p></li>
+      <li class="rounded-3xl bg-mist p-7"><span class="w-12 h-12 rounded-2xl bg-brand-700 text-white grid place-items-center text-lg"><i class="fa-solid fa-mobile-screen-button"></i></span><h3 class="mt-4 font-extrabold text-lg">2. Payez</h3><p class="mt-1.5 text-slate-600">Wave, Orange, MTN, Moov ou carte bancaire.</p></li>
+      <li class="rounded-3xl bg-mist p-7"><span class="w-12 h-12 rounded-2xl bg-brand-700 text-white grid place-items-center text-lg"><i class="fa-brands fa-whatsapp"></i></span><h3 class="mt-4 font-extrabold text-lg">3. Recevez vos accès</h3><p class="mt-1.5 text-slate-600">Par WhatsApp, avec le guide d'installation.</p></li>
+    </ol>
+    <div class="mt-10 flex flex-col sm:flex-row sm:items-center gap-5 rounded-3xl bg-lilac/60 p-5 sm:p-6">
+      <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=200&h=200&fit=crop&crop=faces&auto=format" alt="Sarah, support MailPro à Abidjan" loading="lazy" class="w-16 h-16 rounded-full object-cover ring-4 ring-white">
+      <p class="flex-1 text-slate-700"><strong>Une équipe locale à Abidjan configure tout pour vous</strong> : domaine, boîtes mail, installation sur vos appareils et anti-spam.</p>
+      <a href="https://wa.me/2250708519651" target="_blank" rel="noopener" class="px-5 py-3 rounded-full bg-white font-bold text-emerald-700 hover:bg-emerald-50 text-center"><i class="fa-brands fa-whatsapp mr-1"></i> Nous écrire</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIMULATEUR ===== -->
+<section id="tester" class="py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-5">
+    <div class="rounded-3xl bg-ink text-white p-7 sm:p-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">À quoi ressemblera votre adresse ?</h2>
+      <label for="sim-input" class="sr-only">Nom de votre entreprise</label>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <input id="sim-input" type="text" value="Aya Couture" oninput="updateSim()" placeholder="Le nom de votre entreprise" class="flex-1 px-5 py-3.5 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 font-semibold">
+        <div class="flex rounded-full bg-white/10 p-1 text-sm font-bold" role="group" aria-label="Extension">
+          <button type="button" id="ext-ci" onclick="setExt('.ci')" class="px-4 py-2 rounded-full bg-white text-ink">.ci</button>
+          <button type="button" id="ext-com" onclick="setExt('.com')" class="px-4 py-2 rounded-full">.com</button>
+          <button type="button" id="ext-africa" onclick="setExt('.africa')" class="px-4 py-2 rounded-full">.africa</button>
+        </div>
+      </div>
+      <div class="mt-6 grid sm:grid-cols-2 gap-3" id="sim-list" aria-live="polite"></div>
+      <a href="#tarifs" class="mt-7 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-ink font-bold">Réserver ce nom <i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TARIFS ===== -->
+<section id="tarifs" class="py-16 lg:py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Des prix simples, un seul paiement par an</h2>
+    <p class="mt-3 text-slate-600">Pas d'abonnement mensuel, pas de frais cachés.</p>
+
+    <div class="mt-10 flex md:grid md:grid-cols-3 gap-4 md:gap-6 items-stretch overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-5 px-5 md:mx-0 md:px-0 pt-5 pb-4">
+      <div class="min-w-[84%] sm:min-w-[55%] md:min-w-0 snap-center rounded-3xl border border-lilac p-7 flex flex-col relative">
+        <p id="promo-ribbon" class="hidden absolute -top-3 left-6 px-4 py-1 rounded-full bg-amber-400 text-ink text-xs font-bold">Offre jusqu'au 28 octobre</p>
+        <h3 class="text-xl font-extrabold">Basic</h3>
+        <p class="text-sm text-slate-500">Idéal pour les indépendants</p>
+        <p class="mt-4 text-4xl font-extrabold">18 000 F <small class="text-sm font-semibold text-slate-400">/ an</small></p>
+        <ul class="mt-6 space-y-2.5 text-sm text-slate-700">
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i><span id="b-addr">1 adresse personnalisée</span></li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i><span id="b-go">5 Go de stockage sécurisé</span></li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>iPhone, Android et PC</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Anti-spam et SSL inclus</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Support WhatsApp 7j/7</li>
+        </ul>
+        <a href="https://script.google.com/macros/s/AKfycbyO83a2DTxE0JlBjMhd7-BHusVVeTG-GvwBzrTxrZMChr3ujO0Ewb9ItKBy7vwggfBjSQ/exec?pack=Basic" target="_blank" rel="noopener" class="mt-auto pt-0 block text-center mt-8 py-3.5 rounded-full bg-ink text-white font-bold hover:bg-brand-700">Choisir Basic</a>
+      </div>
+
+      <div class="order-first md:order-none min-w-[84%] sm:min-w-[55%] md:min-w-0 snap-center rounded-3xl border-2 border-brand-700 bg-mist p-7 flex flex-col relative shadow-xl shadow-brand-700/10 md:-translate-y-3">
+        <p class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-700 text-white text-xs font-bold whitespace-nowrap">Le plus choisi par les PME</p>
+        <h3 class="text-xl font-extrabold">Premium</h3>
+        <p class="text-sm text-slate-500">Clé en main pour les équipes</p>
+        <p class="mt-4 text-4xl font-extrabold">35 000 F <small class="text-sm font-semibold text-slate-400">/ an</small></p>
+        <ul class="mt-6 space-y-2.5 text-sm text-slate-700">
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>5 adresses personnalisées</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>25 Go de stockage total</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i><strong>Domaine .ci ou .com offert 1 an</strong></li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Configuration assistée pas à pas</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>SPF, DKIM et DMARC anti-spam</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Support prioritaire 7j/7</li>
+        </ul>
+        <a href="https://script.google.com/macros/s/AKfycbyO83a2DTxE0JlBjMhd7-BHusVVeTG-GvwBzrTxrZMChr3ujO0Ewb9ItKBy7vwggfBjSQ/exec?pack=Premium" target="_blank" rel="noopener" class="mt-auto block text-center mt-8 py-3.5 rounded-full bg-emerald-600 text-white font-bold hover:bg-emerald-700 shadow-lg shadow-emerald-600/20">Choisir Premium</a>
+      </div>
+
+      <div class="min-w-[84%] sm:min-w-[55%] md:min-w-0 snap-center rounded-3xl border border-lilac p-7 flex flex-col">
+        <h3 class="text-xl font-extrabold">Platinium</h3>
+        <p class="text-sm text-slate-500">Entreprises et cabinets</p>
+        <p class="mt-4 text-4xl font-extrabold">Sur devis</p>
+        <ul class="mt-6 space-y-2.5 text-sm text-slate-700">
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>20 adresses et plus (15 à 50 personnes)</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>100 Go de stockage dédié</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Domaine .ci ou .com inclus</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Migration sans coupure</li>
+          <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Facture normalisée DGI</li>
+        </ul>
+        <a href="https://script.google.com/macros/s/AKfycbyO83a2DTxE0JlBjMhd7-BHusVVeTG-GvwBzrTxrZMChr3ujO0Ewb9ItKBy7vwggfBjSQ/exec?pack=Platinium" target="_blank" rel="noopener" class="mt-auto block text-center mt-8 py-3.5 rounded-full bg-ink text-white font-bold hover:bg-brand-700">Demander un devis</a>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-600">
+      <span class="font-semibold">Paiement par</span>
+      <span class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-mist"><img src="https://i.postimg.cc/598R3z44/images-(1).jpg" alt="" class="w-5 h-5 object-contain">Wave</span>
+      <span class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-mist"><img src="https://i.postimg.cc/bwGmMS0f/images-(2).jpg" alt="" class="w-5 h-5 object-contain">Orange Money</span>
+      <span class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-mist"><img src="https://i.postimg.cc/G2P7K0F9/images-(1).png" alt="" class="w-5 h-5 object-contain">MTN MoMo</span>
+      <span class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-mist"><img src="https://i.postimg.cc/7YRVgPFt/images-(2).png" alt="" class="w-5 h-5 object-contain">Moov Money</span>
+    </div>
+
+    <!-- Packs SMS -->
+    <div class="mt-14 rounded-3xl bg-lilac/60 p-7 sm:p-9">
+      <div class="flex flex-wrap items-center gap-3"><h3 class="text-2xl font-extrabold">Packs SMS Pro</h3><span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">Bientôt disponible</span></div>
+      <p class="mt-1 text-slate-600">Plus le pack est grand, moins le SMS coûte : dès 15 F. 10 SMS offerts à l'inscription.</p>
+      <div class="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl p-5"><p class="font-bold text-slate-500 text-sm">Starter</p><p class="text-2xl font-extrabold">1 000 SMS</p><p class="text-brand-700 font-bold">20 000 F</p></div>
+        <div class="bg-white rounded-2xl p-5"><p class="font-bold text-slate-500 text-sm">Business</p><p class="text-2xl font-extrabold">5 000 SMS</p><p class="text-brand-700 font-bold">90 000 F</p></div>
+        <div class="bg-white rounded-2xl p-5"><p class="font-bold text-slate-500 text-sm">Pro</p><p class="text-2xl font-extrabold">10 000 SMS</p><p class="text-brand-700 font-bold">170 000 F</p></div>
+        <div class="bg-white rounded-2xl p-5"><p class="font-bold text-slate-500 text-sm">Entreprise</p><p class="text-2xl font-extrabold">50 000 SMS</p><p class="text-brand-700 font-bold">750 000 F</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AVIS ===== -->
+<section id="avis" class="py-16 lg:py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ils ont adopté MailPro</h2>
+    <div class="mt-10 flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-5 px-5 md:mx-0 md:px-0 pb-2">
+      <figure class="min-w-[85%] md:min-w-0 snap-center bg-white rounded-3xl p-6 border border-lilac"><div class="text-amber-400 text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><blockquote class="text-slate-700">« J'ai enfin une adresse sérieuse pour mes clients. Mes factures passent mieux. »</blockquote><figcaption class="mt-5 flex items-center gap-3"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces&auto=format" alt="" loading="lazy" class="w-11 h-11 rounded-full object-cover"><span><strong class="block text-sm">Kofi N'Guessan</strong><span class="text-xs text-slate-500">Gérant, Abidjan</span></span></figcaption></figure>
+      <figure class="min-w-[85%] md:min-w-0 snap-center bg-white rounded-3xl p-6 border border-lilac"><div class="text-amber-400 text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><blockquote class="text-slate-700">« Configuration ultra rapide sur mon téléphone. L'équipe est très réactive sur WhatsApp. »</blockquote><figcaption class="mt-5 flex items-center gap-3"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces&auto=format" alt="" loading="lazy" class="w-11 h-11 rounded-full object-cover"><span><strong class="block text-sm">Aminata Diabaté</strong><span class="text-xs text-slate-500">Entrepreneure, Bouaké</span></span></figcaption></figure>
+      <figure class="min-w-[85%] md:min-w-0 snap-center bg-white rounded-3xl p-6 border border-lilac"><div class="text-amber-400 text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><blockquote class="text-slate-700">« Parfait pour mon cabinet. Mes clients me prennent plus au sérieux. »</blockquote><figcaption class="mt-5 flex items-center gap-3"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=faces&auto=format" alt="" loading="lazy" class="w-11 h-11 rounded-full object-cover"><span><strong class="block text-sm">Jean-Marc Banny</strong><span class="text-xs text-slate-500">Directeur, Abidjan</span></span></figcaption></figure>
+    </div>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-90">
+      <img src="https://i.postimg.cc/NGNfYDP5/afro-4-removebg-preview.png" alt="AffroBat" loading="lazy" class="h-12 object-contain">
+      <img src="https://i.postimg.cc/R0vjW5W5/415989095-771890468298390-918114629239720159-n.jpg" alt="Royal Phoenix Group" loading="lazy" class="h-12 object-contain">
+      <img src="https://i.postimg.cc/QtqTb7bq/tcr43Go-Gb-M.png" alt="GTBank" loading="lazy" class="h-12 object-contain">
+    </div>
+  </div>
+</section>
+
+<!-- ===== POURQUOI ===== -->
+<section class="py-14 bg-white">
+  <div class="max-w-4xl mx-auto px-5 grid sm:grid-cols-2 gap-5">
+    <div class="rounded-3xl bg-rose-50 p-6"><h3 class="font-extrabold">Une adresse @gmail.com</h3><ul class="mt-3 space-y-2 text-sm text-slate-600"><li><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>Perçue comme informelle</li><li><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>Vos devis risquent le spam</li><li><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>Un employé qui part garde vos e-mails</li></ul></div>
+    <div class="rounded-3xl bg-lilac/60 p-6 ring-2 ring-brand-700"><h3 class="font-extrabold">Une adresse @votreentreprise.ci</h3><ul class="mt-3 space-y-2 text-sm text-slate-700"><li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Confiance immédiate</li><li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Livraison fiable (SPF, DKIM, DMARC)</li><li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Votre nom et vos données vous appartiennent</li></ul></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Questions fréquentes</h2>
+    <div class="mt-8 space-y-3">
+      <details class="bg-white rounded-2xl border border-lilac p-5" open><summary class="flex justify-between items-center font-bold">Faut-il un site web ?<i class="fa-solid fa-chevron-down chev text-xs text-slate-400"></i></summary><p class="mt-3 text-slate-600">Non. Nous enregistrons votre nom de domaine uniquement pour vos e-mails, sans site ni connaissances techniques.</p></details>
+      <details class="bg-white rounded-2xl border border-lilac p-5"><summary class="flex justify-between items-center font-bold">Comment payer ?<i class="fa-solid fa-chevron-down chev text-xs text-slate-400"></i></summary><p class="mt-3 text-slate-600">Par Wave, Orange Money, MTN, Moov ou carte bancaire, avec notre lien de paiement sécurisé. Un reçu arrive aussitôt.</p></details>
+      <details class="bg-white rounded-2xl border border-lilac p-5"><summary class="flex justify-between items-center font-bold">En combien de temps je reçois mes accès ?<i class="fa-solid fa-chevron-down chev text-xs text-slate-400"></i></summary><p class="mt-3 text-slate-600">Sous 30 minutes après confirmation du paiement, en journée. Identifiants et guide d'installation arrivent par WhatsApp.</p></details>
+      <details class="bg-white rounded-2xl border border-lilac p-5"><summary class="flex justify-between items-center font-bold">Comment joindre le support ?<i class="fa-solid fa-chevron-down chev text-xs text-slate-400"></i></summary><p class="mt-3 text-slate-600">Sur WhatsApp au <strong>+225 07 08 51 96 51</strong> ou par e-mail à <strong>support@mailpro.ci</strong>, 7 jours sur 7.</p></details>
+      <details class="bg-white rounded-2xl border border-lilac p-5"><summary class="flex justify-between items-center font-bold">Puis-je changer de domaine plus tard ?<i class="fa-solid fa-chevron-down chev text-xs text-slate-400"></i></summary><p class="mt-3 text-slate-600">Oui, vous pouvez changer de domaine ou en ajouter un. Contactez-nous pour voir les options selon votre pack.</p></details>
+      <details class="bg-white rounded-2xl border border-lilac p-5"><summary class="flex justify-between items-center font-bold">Et si je ne renouvelle pas ?<i class="fa-solid fa-chevron-down chev text-xs text-slate-400"></i></summary><p class="mt-3 text-slate-600">Le service expire simplement. Nous vous envoyons un rappel avant l'échéance et vous pouvez renouveler à tout moment, sans pénalité.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPEL À L'ACTION + NEWSLETTER ===== -->
+<section class="pb-16 lg:pb-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="rounded-[2rem] bg-gradient-to-br from-brand-700 to-[#3b1a7a] text-white p-8 sm:p-12 grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Prêt à inspirer confiance à vos clients ?</h2>
+        <p class="mt-3 text-violet-200">Commandez en ligne et recevez vos accès en 30 minutes.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#tarifs" class="px-7 py-4 rounded-full bg-emerald-400 hover:bg-emerald-300 text-ink font-bold">Commander maintenant</a>
+          <a href="https://wa.me/2250708519651?text=Bonjour%2C%20je%20veux%20commander%20mon%20adresse%20pro%20MailPro%20CI." target="_blank" rel="noopener" class="px-6 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 font-bold"><i class="fa-brands fa-whatsapp mr-2"></i>Parler à un conseiller</a>
+        </div>
+      </div>
+      <div id="newsletter" class="rounded-2xl bg-white/10 border border-white/20 p-6">
+        <p class="font-bold"><i class="fa-solid fa-gift text-emerald-300 mr-2"></i>Guide gratuit</p>
+        <p class="mt-1 text-sm text-violet-200">« Les 5 erreurs à éviter avec votre e-mail professionnel » et un conseil par mois, sans spam.</p>
+        <a href="https://script.google.com/macros/s/AKfycbyO83a2DTxE0JlBjMhd7-BHusVVeTG-GvwBzrTxrZMChr3ujO0Ewb9ItKBy7vwggfBjSQ/exec?pack=Newsletter&source=SectionSite" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-brand-800 font-bold hover:bg-lilac"><i class="fa-solid fa-paper-plane"></i> Je m'inscris gratuitement</a>
+        <p class="mt-3 text-[11px] text-violet-300">Désinscription en 1 clic. Aucune revente de données.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== PIED DE PAGE ===== -->
+<footer class="bg-ink text-slate-400 text-sm pb-20 md:pb-0">
+  <div class="max-w-6xl mx-auto px-5 py-12 grid md:grid-cols-3 gap-8">
+    <div>
+      <p class="text-xl font-extrabold text-white">Mail<span class="text-violet-400">Pro</span>.ci</p>
+      <p class="mt-3 max-w-xs">L'e-mail professionnel et les SMS pro des entreprises ivoiriennes, avec paiement Mobile Money ou carte.</p>
+      <p class="mt-3 text-xs"><i class="fa-solid fa-location-dot text-violet-400 mr-1"></i> Abidjan, Côte d'Ivoire · 7j/7</p>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-3">Navigation</p>
+      <ul class="space-y-2"><li><a href="#offres" class="hover:text-white">Nos solutions</a></li><li><a href="#comment" class="hover:text-white">Comment ça marche</a></li><li><a href="#tester" class="hover:text-white">Tester mon adresse</a></li><li><a href="#tarifs" class="hover:text-white">Tarifs</a></li><li><a href="#faq" class="hover:text-white">FAQ</a></li></ul>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-3">Contact</p>
+      <ul class="space-y-2"><li><a href="https://wa.me/2250708519651" target="_blank" rel="noopener" class="hover:text-emerald-400"><i class="fa-brands fa-whatsapp text-emerald-500 mr-2"></i>+225 07 08 51 96 51</a></li><li><a href="mailto:support@mailpro.ci" class="hover:text-white"><i class="fa-solid fa-envelope text-violet-400 mr-2"></i>support@mailpro.ci</a></li></ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row justify-between gap-3 text-xs">
+      <p>© <span id="year">2026</span> MailPro.ci · Tous droits réservés.</p>
+      <p class="flex flex-wrap gap-x-5 gap-y-1"><a href="https://sites.google.com/view/mailspros/nos-politiques/politique-de-confidentialite?authuser=0" target="_blank" rel="noopener" class="hover:text-white">Politique de confidentialité</a><a href="https://sites.google.com/view/mailspros/nos-politiques/condition-generale-de-vente?authuser=0" target="_blank" rel="noopener" class="hover:text-white">Conditions générales de vente</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Barre d'action mobile -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-lilac px-4 py-3 flex gap-3">
+  <a href="#tarifs" class="flex-1 text-center py-3.5 rounded-full bg-brand-700 text-white font-bold">Commander</a>
+  <a href="https://wa.me/2250708519651?text=Bonjour%2C%20je%20souhaite%20des%20renseignements%20sur%20MailPro%20CI." target="_blank" rel="noopener" class="flex-1 text-center py-3.5 rounded-full bg-emerald-500 text-white font-bold"><i class="fa-brands fa-whatsapp mr-1"></i>WhatsApp</a>
+</div>
+
+<!-- WhatsApp flottant (ordinateur) -->
+<a href="https://wa.me/2250708519651?text=Bonjour%2C%20je%20souhaite%20des%20renseignements%20sur%20MailPro%20CI." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp" class="fixed bottom-5 right-5 z-40 hidden md:flex items-center gap-2 px-5 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-500/30">
+  <i class="fa-brands fa-whatsapp text-2xl"></i><span class="hidden sm:inline text-sm">WhatsApp 7j/7</span>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Offre spéciale : s'affiche seule jusqu'au 28 octobre 2026, puis disparaît automatiquement
+  if (new Date() <= new Date('2026-10-28T23:59:59')) {
+    document.getElementById('promo-badge').classList.remove('hidden');
+    document.getElementById('promo-badge').classList.add('inline-flex');
+    document.getElementById('promo-ribbon').classList.remove('hidden');
+    document.getElementById('b-addr').textContent = '2 adresses personnalisées';
+    document.getElementById('b-go').textContent = '10 Go de stockage sécurisé';
+  }
+
+  // Simulateur d'adresse
+  let ext = '.ci';
+  function slug(v) {
+    return (v || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '') || 'votreentreprise';
+  }
+  function updateSim() {
+    const d = slug(document.getElementById('sim-input').value) + ext;
+    document.getElementById('sim-list').innerHTML = ['contact', 'direction'].map(function (p) {
+      return '<div class="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3"><i class="fa-solid fa-circle-check text-emerald-400"></i><strong class="truncate">' + p + '@' + d + '</strong></div>';
+    }).join('');
+  }
+  function setExt(e) {
+    ext = e;
+    ['.ci', '.com', '.africa'].forEach(function (x) {
+      const b = document.getElementById('ext-' + x.slice(1));
+      b.className = 'px-4 py-2 rounded-full' + (x === e ? ' bg-white text-ink' : '');
+    });
+    updateSim();
+  }
+  updateSim();
+</script>
+<script>
+const EN = {
+"Nos solutions":"Our solutions","Comment ça marche":"How it works","Tarifs":"Pricing","Commander":"Order",
+"Jusqu'au 28 octobre : 2 e-mails pro + 10 Go pour 18 000 F":"Until 28 October: 2 pro e-mails + 10 GB for 18,000 FCFA",
+"Une image professionnelle, dès le premier message.":"A professional image, from the very first message.",
+"E-mail pro et SMS pro pour les entreprises de Côte d'Ivoire. On configure tout, vous payez par Mobile Money ou carte bancaire.":"Professional e-mail and SMS for businesses in Côte d'Ivoire. We set everything up; you pay by Mobile Money or bank card.",
+"Voir les offres":"See our plans","Tester mon adresse":"Try my address","· +150 entrepreneurs équipés":"· 150+ entrepreneurs equipped",
+"Actif et vérifié":"Active and verified","Bonjour Aya, votre rendez-vous est confirmé demain à 10h.":"Hello Aya, your appointment is confirmed for tomorrow at 10am.",
+"MailPro SMS · Envoyé":"MailPro SMS · Sent","Deux façons de parler à vos clients":"Two ways to talk to your customers",
+"direction@votreentreprise.ci":"direction@yourcompany.ci","Devis n° 024 · votre proposition":"Quote no. 024 · your proposal",
+"Votre adresse @votreentreprise.ci, prête en 30 minutes.":"Your @yourcompany.ci address, ready in 30 minutes.",
+"Sans site web":"No website needed","Anti-spam inclus":"Anti-spam included","Voir les tarifs":"See pricing",
+"Bonjour Kofi, votre commande est en route.":"Hello Kofi, your order is on its way.","Merci, je vous attends !":"Thank you, I'm waiting for you!",
+"Bientôt disponible":"Coming soon","Envoyez un message personnalisé à tous vos clients en quelques clics.":"Send a personalised message to all your customers in a few clicks.",
+"Envois programmés":"Scheduled sending","Dès 15 F le SMS":"From 15 FCFA per SMS","10 SMS offerts":"10 free SMS","Être prévenu du lancement":"Get notified at launch",
+"Prêt en 30 minutes, depuis votre téléphone":"Ready in 30 minutes, from your phone","1. Choisissez":"1. Choose",
+"Votre nom d'entreprise et votre pack, sur WhatsApp ou en ligne.":"Your company name and your plan, on WhatsApp or online.",
+"2. Payez":"2. Pay","Wave, Orange, MTN, Moov ou carte bancaire.":"Wave, Orange, MTN, Moov or bank card.",
+"3. Recevez vos accès":"3. Get your access","Par WhatsApp, avec le guide d'installation.":"By WhatsApp, with the setup guide.",
+"Une équipe locale à Abidjan configure tout pour vous":"A local team in Abidjan sets everything up for you",
+": domaine, boîtes mail, installation sur vos appareils et anti-spam.":": domain, mailboxes, installation on your devices and anti-spam.",
+"Nous écrire":"Message us","À quoi ressemblera votre adresse ?":"What will your address look like?",
+"Nom de votre entreprise":"Your company name","Réserver ce nom":"Reserve this name",
+"Des prix simples, un seul paiement par an":"Simple pricing, one payment per year","Pas d'abonnement mensuel, pas de frais cachés.":"No monthly subscription, no hidden fees.",
+"Offre jusqu'au 28 octobre":"Offer until 28 October","Idéal pour les indépendants":"Ideal for freelancers",
+"18 000 F":"18,000 FCFA (≈ US$33)","/ an":"/ year","1 adresse personnalisée":"1 custom address","2 adresses personnalisées":"2 custom addresses",
+"5 Go de stockage sécurisé":"5 GB of secure storage","10 Go de stockage sécurisé":"10 GB of secure storage","iPhone, Android et PC":"iPhone, Android and PC",
+"Anti-spam et SSL inclus":"Anti-spam and SSL included","Support WhatsApp 7j/7":"WhatsApp support, 7 days a week","Choisir Basic":"Choose Basic",
+"Le plus choisi par les PME":"Most popular with SMEs","Clé en main pour les équipes":"Turnkey for teams","35 000 F":"35,000 FCFA (≈ US$64)",
+"5 adresses personnalisées":"5 custom addresses","25 Go de stockage total":"25 GB of total storage","Domaine .ci ou .com offert 1 an":"Free .ci or .com domain for 1 year",
+"Configuration assistée pas à pas":"Step-by-step assisted setup","SPF, DKIM et DMARC anti-spam":"SPF, DKIM and DMARC anti-spam",
+"Support prioritaire 7j/7":"Priority support, 7 days a week","Choisir Premium":"Choose Premium","Entreprises et cabinets":"Companies and firms","Sur devis":"Custom quote",
+"20 adresses et plus (15 à 50 personnes)":"20+ addresses (15 to 50 people)","100 Go de stockage dédié":"100 GB of dedicated storage",
+"Domaine .ci ou .com inclus":".ci or .com domain included","Migration sans coupure":"Migration with no downtime","Facture normalisée DGI":"Tax-compliant invoice (DGI)",
+"Demander un devis":"Request a quote","Paiement par":"Pay with","Packs SMS Pro":"SMS Pro packs",
+"Plus le pack est grand, moins le SMS coûte : dès 15 F. 10 SMS offerts à l'inscription.":"The bigger the pack, the cheaper each SMS: from 15 FCFA. 10 free SMS when you sign up.",
+"1 000 SMS":"1,000 SMS","20 000 F":"20,000 FCFA","5 000 SMS":"5,000 SMS","90 000 F":"90,000 FCFA","10 000 SMS":"10,000 SMS","170 000 F":"170,000 FCFA",
+"50 000 SMS":"50,000 SMS","750 000 F":"750,000 FCFA","Entreprise":"Enterprise","Ils ont adopté MailPro":"They chose MailPro",
+"« J'ai enfin une adresse sérieuse pour mes clients. Mes factures passent mieux. »":"“At last I have a serious address for my customers. My invoices go through better.”",
+"Gérant, Abidjan":"Manager, Abidjan",
+"« Configuration ultra rapide sur mon téléphone. L'équipe est très réactive sur WhatsApp. »":"“Super-fast setup on my phone. The team is very responsive on WhatsApp.”",
+"Entrepreneure, Bouaké":"Entrepreneur, Bouaké","« Parfait pour mon cabinet. Mes clients me prennent plus au sérieux. »":"“Perfect for my firm. My clients take me more seriously.”",
+"Directeur, Abidjan":"Director, Abidjan","Une adresse @gmail.com":"A @gmail.com address","Perçue comme informelle":"Seen as informal",
+"Vos devis risquent le spam":"Your quotes may land in spam","Un employé qui part garde vos e-mails":"A departing employee keeps your e-mails",
+"Une adresse @votreentreprise.ci":"An @yourcompany.ci address","Confiance immédiate":"Instant trust","Livraison fiable (SPF, DKIM, DMARC)":"Reliable delivery (SPF, DKIM, DMARC)",
+"Votre nom et vos données vous appartiennent":"Your name and your data belong to you","Questions fréquentes":"Frequently asked questions",
+"Faut-il un site web ?":"Do I need a website?","Non. Nous enregistrons votre nom de domaine uniquement pour vos e-mails, sans site ni connaissances techniques.":"No. We register your domain name just for your e-mails, with no website or technical knowledge needed.",
+"Comment payer ?":"How do I pay?","Par Wave, Orange Money, MTN, Moov ou carte bancaire, avec notre lien de paiement sécurisé. Un reçu arrive aussitôt.":"By Wave, Orange Money, MTN, Moov or bank card, using our secure payment link. A receipt arrives straight away.",
+"En combien de temps je reçois mes accès ?":"How soon do I get my access?",
+"Sous 30 minutes après confirmation du paiement, en journée. Identifiants et guide d'installation arrivent par WhatsApp.":"Within 30 minutes after payment is confirmed, during the day. Your login details and setup guide arrive by WhatsApp.",
+"Comment joindre le support ?":"How do I contact support?","Sur WhatsApp au":"On WhatsApp at","ou par e-mail à":"or by e-mail at",", 7 jours sur 7.":", 7 days a week.",
+"Puis-je changer de domaine plus tard ?":"Can I change my domain later?","Oui, vous pouvez changer de domaine ou en ajouter un. Contactez-nous pour voir les options selon votre pack.":"Yes, you can change domain or add one. Contact us to see the options for your plan.",
+"Et si je ne renouvelle pas ?":"What if I don't renew?","Le service expire simplement. Nous vous envoyons un rappel avant l'échéance et vous pouvez renouveler à tout moment, sans pénalité.":"The service simply expires. We send you a reminder before the due date, and you can renew at any time with no penalty.",
+"Prêt à inspirer confiance à vos clients ?":"Ready to earn your customers' trust?","Commandez en ligne et recevez vos accès en 30 minutes.":"Order online and get your access in 30 minutes.",
+"Commander maintenant":"Order now","Parler à un conseiller":"Talk to an advisor","Guide gratuit":"Free guide",
+"« Les 5 erreurs à éviter avec votre e-mail professionnel » et un conseil par mois, sans spam.":"“The 5 mistakes to avoid with your professional e-mail” and one tip a month, no spam.",
+"Je m'inscris gratuitement":"Sign up for free","Désinscription en 1 clic. Aucune revente de données.":"Unsubscribe in 1 click. We never sell your data.",
+"L'e-mail professionnel et les SMS pro des entreprises ivoiriennes, avec paiement Mobile Money ou carte.":"Professional e-mail and SMS for Ivorian businesses, with Mobile Money or card payment.",
+"Abidjan, Côte d'Ivoire · 7j/7":"Abidjan, Côte d'Ivoire · 7 days a week","MailPro.ci · Tous droits réservés.":"MailPro.ci · All rights reserved.",
+"Politique de confidentialité":"Privacy policy","Conditions générales de vente":"Terms and conditions of sale","WhatsApp 7j/7":"WhatsApp 7 days a week",
+"Deux collègues souriants devant un ordinateur":"Two smiling colleagues at a computer","Sarah, support MailPro à Abidjan":"Sarah, MailPro support in Abidjan",
+"Le nom de votre entreprise":"Your company name","MailPro.ci, accueil":"MailPro.ci, home","Écrire sur WhatsApp":"Write on WhatsApp"
+};
+const WA_EN = {
+"Bonjour, je veux créer mon e-mail pro":"Hello, I want to create my professional e-mail",
+"Bonjour, je veux être prévenu(e) du lancement de MailPro SMS.":"Hello, please let me know when MailPro SMS launches.",
+"Bonjour, je veux commander mon adresse pro MailPro CI.":"Hello, I want to order my MailPro CI professional e-mail address.",
+"Bonjour, je souhaite des renseignements sur MailPro CI.":"Hello, I would like information about MailPro CI."
+};
+const TITRE_FR = document.title;
+const TITRE_EN = "MailPro · Professional e-mail and SMS in Côte d'Ivoire";
+const ORIG = new WeakMap();
+const norm = function (t) { return t.replace(/\s+/g, ' ').trim(); };
+
+function appliquerLangue(lang) {
+  const en = lang === 'en';
+  document.documentElement.lang = lang;
+  document.title = en ? TITRE_EN : TITRE_FR;
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  const noeuds = []; while (w.nextNode()) noeuds.push(w.currentNode);
+  noeuds.forEach(function (n) {
+    if (/^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName)) return;
+    if (!ORIG.has(n)) { if (!EN[norm(n.nodeValue)]) return; ORIG.set(n, n.nodeValue); }
+    const o = ORIG.get(n);
+    if (!en) { n.nodeValue = o; return; }
+    const t = EN[norm(o)], m = o.match(/^(\s*)[\s\S]*?(\s*)$/);
+    n.nodeValue = m[1] + t + m[2];
+  });
+  ['placeholder', 'alt', 'aria-label'].forEach(function (attr) {
+    document.querySelectorAll('[' + attr + ']').forEach(function (el) {
+      const cle = 'o' + attr.replace('-', '');
+      if (!el.dataset[cle]) el.dataset[cle] = el.getAttribute(attr);
+      el.setAttribute(attr, en && EN[el.dataset[cle]] ? EN[el.dataset[cle]] : el.dataset[cle]);
+    });
+  });
+  // Formulaire de commande : même langue ; WhatsApp : message pré-rempli dans la bonne langue
+  document.querySelectorAll('a[href*="AKfycbyO83a2"]').forEach(function (a) {
+    const u = new URL(a.href); if (en) u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang'); a.href = u.toString();
+  });
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+    const u = new URL(a.href), t = u.searchParams.get('text'); if (!t) return;
+    if (!a.dataset.otext) a.dataset.otext = t;
+    const o = a.dataset.otext;
+    a.href = u.origin + u.pathname + '?text=' + encodeURIComponent(en && WA_EN[o] ? WA_EN[o] : o);
+  });
+  ['fr', 'en'].forEach(function (l) {
+    document.getElementById('lang-' + l).className = 'px-3 py-1.5 rounded-full' + (l === lang ? ' bg-white text-brand-700 shadow-sm' : ' text-slate-500');
+  });
+}
+function setLang(lang) {
+  try { localStorage.setItem('mailpro_lang', lang); } catch (e) {}
+  appliquerLangue(lang);
+}
+(function () {
+  let choix = new URLSearchParams(location.search).get('lang');
+  try { choix = choix || localStorage.getItem('mailpro_lang'); } catch (e) {}
+  if (!choix) choix = /^en/i.test(navigator.language || '') ? 'en' : 'fr';
+  appliquerLangue(choix === 'en' ? 'en' : 'fr');
+})();
+</script>
+</body>
+</html>
